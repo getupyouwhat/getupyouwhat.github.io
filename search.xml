@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[分页算法]]></title>
+    <url>%2F2018%2F09%2F25%2Fhello%2F</url>
+    <content type="text"><![CDATA[const makeResult = (total,cur,around) =&gt; { ​ let result = []; ​ let baseCount = around * 2 + 1 + 2 + 2 + 2; //总共元素个数 ​ let surplus = baseCount - 4; //只出现一个省略号 剩余元素个数 ​ let startPosition = 1 + 2 + around,endPosition = total - 2 - around; if(total &lt;= baseCount - 2){ //全部显示 不出现省略号 result = Array.from({xlength: total}, (v, i) =&gt; i + 1); }else{ //需要出现省略号 if(cur &lt;= startPosition){ //1.只有后面出现省略号 result = [...Array.from({length: surplus}, (v, i) =&gt; i + 1),&quot;...&quot;,total] }else if(cur &gt;= endPosition) { //2.只有前边出现省略号 result = [1,&#39;...&#39;,...Array.from({length: surplus}, (v, i) =&gt; total - surplus + i + 1)] }else{ //3.两边都有省略号 result = [1,&#39;...&#39;,...Array.from({length: around * 2 + 1}, (v, i) =&gt; cur - around + i),&#39;...&#39;,total] } } return result }]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>分享</tag>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[第一个应用]]></title>
+    <url>%2F2018%2F09%2F25%2Ftitle%2F</url>
+    <content type="text"><![CDATA[dasfdsafasdfadfasdafsdfasdafsdfasdafs###### sdfasdfsadfafsd 文字引用 &lt;链接地址&gt;例如：https://forwhfang.github.io 表头1 表头2 内容11 内容12 内容21 内容22]]></content>
+      <categories>
+        <category>后台</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+</search>
